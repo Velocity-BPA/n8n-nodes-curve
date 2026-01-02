@@ -1,0 +1,39 @@
+# Source files (dist is published)
+credentials/
+nodes/
+*.ts
+!*.d.ts
+
+# Config files
+tsconfig.json
+.eslintrc.js
+.prettierrc
+jest.config.js
+gulpfile.js
+
+# Development
+.git/
+.github/
+.vscode/
+.idea/
+
+# Test files
+test/
+coverage/
+*.test.ts
+*.spec.ts
+
+# Scripts
+scripts/
+
+# Docs kept but source excluded
+*.md
+!README.md
+!LICENSE
+!COMMERCIAL_LICENSE.md
+!LICENSING_FAQ.md
+
+# Misc
+.DS_Store
+*.log
+.env*

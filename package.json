@@ -1,0 +1,90 @@
+{
+  "name": "n8n-nodes-curve",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Curve Finance providing 7 resources and 40+ operations for DeFi liquidity pools, gauges, crvUSD, and Curve Lending across 21+ blockchain networks.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-curve.git"
+  },
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-curve#readme",
+  "bugs": {
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-curve/issues"
+  },
+  "main": "dist/nodes/Curve/Curve.node.js",
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "curve",
+    "curve-finance",
+    "defi",
+    "dex",
+    "stableswap",
+    "crvusd",
+    "lending",
+    "llamalend",
+    "liquidity-pools",
+    "gauges",
+    "yield-farming",
+    "stablecoin",
+    "ethereum",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "blockchain",
+    "web3",
+    "automation"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/CurveApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Curve/Curve.node.js",
+      "dist/nodes/Curve/CurveTrigger.node.js"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.27.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "^1.27.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
